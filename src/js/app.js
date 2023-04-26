@@ -1,12 +1,6 @@
-import PopOverComponent from './PopOverComponent';
+import Gui from './Gui';
+import Logic from './Logic';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const container = document.querySelector('#ComponentContainer');
-  const widget = new PopOverComponent(container, {
-    title: 'Какой-то заголовок',
-    text: 'Будьте добры, прочитайте этот текст. Этот текст очень важен для вас.',
-  });
-  widget.bindToDOM();
-  // eslint-disable-next-line no-console
-  console.log('Component started!');
-});
+const gui = new Gui();
+const logic = new Logic(gui);
+logic.init();
